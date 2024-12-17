@@ -55,6 +55,7 @@ pipeline {
             steps {
                 script {
                     sh '''
+                        trivy image ${IMAGE_NAME}:${BUILD_NUMBER}
                         docker login -u ${DOCKER_USERNSME} -p ${DOCKER_PASSWORD}
                         docker tag ${IMAGE_NAME}:${BUILD_NUMBER} ${DOCKER_USERNSME}/${IMAGE_NAME}:${BUILD_NUMBER}
                         docker push ${DOCKER_USERNSME}/${IMAGE_NAME}:${BUILD_NUMBER}
