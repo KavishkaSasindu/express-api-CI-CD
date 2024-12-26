@@ -4,7 +4,7 @@ pipeline {
         nodejs 'Node-22.11'
     }
     environment {
-        IMAGE_NAME = 'express-api'
+        IMAGE_NAME = ''
         DOCKER_USERNSME = ''
         DOCKER_PASSWORD = ''
     }
