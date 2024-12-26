@@ -4,7 +4,7 @@ pipeline {
         nodejs 'Node-22.11'
     }
     environment {
-        IMAGE_NAME = ''
+        IMAGE_NAME = 'your image name'
         DOCKER_USERNSME = ''
         DOCKER_PASSWORD = ''
     }
